@@ -1,9 +1,1 @@
-docker run -d \
-       --name koel-music-atomicapp \
-       -p $koel_http_port:8000 --link mariadb-atomicapp-app:mysql  \
-       -e DB_CONNECTION=$db_conn \
-       -e DB_HOST=$db_host \
-       -e DB_DATABASE=$db_name \
-       -e DB_USERNAME=$db_user \
-       -e DB_PASSWORD=$db_pass \
-       $image
+docker run -d --name koel-music-atomicapp-007 -p $koel_http_port:8000 --link mariadb-atomicapp-app:mariadb -e DB_CONNECTION=$db_conn -e DB_HOST=$db_host -e DB_DATABASE=$db_name -e DB_USERNAME=$db_user -e DB_PASSWORD=$db_pass -v $music_path:$music_path:Z $image

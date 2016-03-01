@@ -29,6 +29,8 @@ graph:
       - name: koel_http_port
         description: port for docker port mapping (used only with docker provider)
         default: 80
+      - name: music_path
+        description: Path on host where your music is
     artifacts:
       docker:
         - file://artifacts/docker/koel-run
